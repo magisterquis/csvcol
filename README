@@ -73,6 +73,14 @@ directory.  The "package ranges" line at the top of ranges.go should be
 changed to "package main" and "github.com/kd5pbo/ranges" will need to be
 removed from the import section in csvcol.go
 
+Binaries
+--------
+There are two binaries in the git repo, csvcol.linux.x86 and csvcol.linux.x64.
+They are 32-bit an 64-bit Linux binaries, respectively.  As they were compiled
+by the go cross-compiler, it's not impossible that there will be hidden bugs,
+but given the simplicity of the code, this is unlikely (at least for bugs due
+to cross-compiling).
+
 Sample Data
 -----------
 Included with the source is a sample CSV file containing census information
