@@ -3,7 +3,7 @@
  * Program to select columns (and rows) from a CSV file.
  * by J. Stuart McMurray
  * Created 20141119
- * Last modified 20141119
+ * Last modified 20141120
  *
  * Copyright (c) 2014 J. Stuart McMurray <kd5pbo@gmail.com>
  *
