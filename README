@@ -72,3 +72,8 @@ Alternatively, the two .go files from csvcol and rages can be placed in a
 directory.  The "package ranges" line at the top of ranges.go should be
 changed to "package main" and "github.com/kd5pbo/ranges" will need to be
 removed from the import section in csvcol.go
+
+Sample Data
+-----------
+Included with the source is a sample CSV file containing census information
+for Texas.  It should serve as a reasonable test file.
