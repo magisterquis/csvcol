@@ -40,7 +40,9 @@ var gc struct {
 	cols        *string
 	colfile     *string
 	verbose     *bool
+	v           *bool
 	debug       *bool
+	d           *bool
 	commentChar *string
 }
 
@@ -53,8 +55,14 @@ func main() {
 	gc.colfile = flag.String("colfile", "", "If specified, 1-indexed column numbers to to indicate columns to output will be read from this file.  The format is the nearly the same as for -columns, but may be given on multiple lines.  May be - to read from the standard input (in which case, neither csvfile nor rowfile may be -).  If both this and -cols are specified, columns specified by either this file or -cols will be output.")
 	gc.commentChar = flag.String("commentChar", "#", "Comment character.  If a line starts with this character, it will be ignored.")
 	gc.verbose = flag.Bool("verbose", false, "Print informational messages to the standard error stream.")
+	gc.v = flag.Bool("v", false, "Same as -verbose")
 	gc.debug = flag.Bool("debug", false, "Print debugging messages to the standard error stream.")
+	gc.d = flag.Bool("d", false, "Same as debug")
 	flag.Parse()
+
+	/* Handle -v and -d */
+	*gc.verbose = *gc.verbose || *gc.v
+	*gc.debug = *gc.debug || *gc.d
 
 	/* Ensure that only one of the files is stdin */
 	s := false /* Using stdin */
