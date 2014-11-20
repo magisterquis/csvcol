@@ -9,8 +9,8 @@ Quick Example:
 ./csvcol -cols=-3,5-7,9,11- -rows=1,10- datafile.csv
 
 This reads datafile.csv and print to the standard output columns
-1, 2, 3, 5, 6, 7, 9, and all columns from the 10th column to the end of the
-data (inclusive of the 10th column).  Only the first row and all rows from the
+1, 2, 3, 5, 6, 7, 9, and all columns from the 11th column to the end of the
+data (inclusive of the 11th column).  Only the first row and all rows from the
 10th onward (inclusive of the 10th row) are printed.
 
 Input
@@ -49,6 +49,10 @@ Three ways to print all but the first 10 columns in the file data.csv:
 csvcol -cols 11- data.csv
 cat data.csv | csvcol -cols 11-
 csvcol -cols 11- <data.csv
+
+Save the first five columns of bigfile.csv to smallfile.csv
+
+csvcol -cols -5 bigfile.csv >smallfile.csv
 
 Gotchas
 -------
