@@ -3,9 +3,9 @@
  * Program to select columns (and rows) from a CSV file.
  * by J. Stuart McMurray
  * Created 20141119
- * Last modified 20141120
+ * Last modified 20170501
  *
- * Copyright (c) 2014 J. Stuart McMurray <kd5pbo@gmail.com>
+ * Copyright (c) 2014-2017 J. Stuart McMurray <kd5pbo@gmail.com>
  *
  * Permission to use, copy, modify, and distribute this software for any
  * purpose with or without fee is hereby granted, provided that the above
