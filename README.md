@@ -6,7 +6,9 @@ to the standard output.
 
 Quick Example:
 
+```
 ./csvcol -cols=-3,5-7,9,11- -rows=1,10- datafile.csv
+```
 
 This reads datafile.csv and print to the standard output columns
 1, 2, 3, 5, 6, 7, 9, and all columns from the 11th column to the end of the
@@ -46,13 +48,17 @@ grep -n ZZ file.csv | cut -f 1 -d ":" | csvcol -cols 1,3 -rowfile - data.csv
 
 Three ways to print all but the first 10 columns in the file data.csv:
 
+```
 csvcol -cols 11- data.csv
 cat data.csv | csvcol -cols 11-
 csvcol -cols 11- <data.csv
+```
 
 Save the first five columns of bigfile.csv to smallfile.csv
 
+```
 csvcol -cols -5 bigfile.csv >smallfile.csv
+```
 
 Gotchas
 -------
@@ -64,17 +70,19 @@ and what they do.
 Building
 --------
 The only library not included in the go distribution is
-github.com/kd5pbo/ranges, which was written specifically for csvcol.  The
+github.com/magisterquis/ranges, which was written specifically for csvcol.  The
 easiest way to build (and install) csvcol is with the following commands:
 
-go get github.com/kd5pbo/csvcol
-go install github.com/kd5pbo/csvcol
+```
+go get github.com/magisterquis/csvcol
+go install github.com/magisterquis/csvcol
+```
 
 This, of course, assumes GOROOT is set up in the typical fashion.
 
 Alternatively, the two .go files from csvcol and rages can be placed in a
 directory.  The "package ranges" line at the top of ranges.go should be
-changed to "package main" and "github.com/kd5pbo/ranges" will need to be
+changed to "package main" and "github.com/magisterquis/ranges" will need to be
 removed from the import section in csvcol.go
 
 Binaries

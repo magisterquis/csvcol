@@ -27,9 +27,10 @@ import (
 	"encoding/csv"
 	"flag"
 	"fmt"
-	"github.com/kd5pbo/ranges"
 	"os"
 	"strings"
+
+	"github.com/magisterquis/ranges"
 )
 
 /* Global config */
